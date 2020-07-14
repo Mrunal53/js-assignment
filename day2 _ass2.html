@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 2</title>
+</head>
+<body>
+    <h3>Date: </h3>
+    <p id="type1a"></p>
+    <p id="type1b"></p>
+    <p id="type2a"></p>
+    <p id="type2b"></p>
+
+    <script>
+        var getDate = new Date();
+        document.getElementById("type1a").innerHTML= getDate.getMonth() + "-" + getDate.getDate() + "-" + getDate.getFullYear();
+        document.getElementById("type1b").innerHTML= getDate.getMonth() + "/" + getDate.getDate() + "/" + getDate.getFullYear() + "     OR";
+        document.getElementById("type2a").innerHTML= getDate.getDate() + "-" + getDate.getMonth() + "-" + getDate.getFullYear();
+        document.getElementById("type2b").innerHTML= getDate.getDate() + "/" + getDate.getMonth() + "/" + getDate.getFullYear();
+        
+    </script>
+    <button onclick="fun()">Click to print</button>
+    
+    <script type="text/javascript">
+        function fun()
+        {
+            window.print();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,111 @@
+QUESTION 1:
+[1] Explore and explain the various methods in console function. Explain them.
+ 
+Ans)             
+Console log : 
+	The console object provides access to the browser's debugging console .
+	The specifics of how it works varies from browser to browser, but there is a de facto set of features that are typically provided.
+	The console object can be accessed from any global object.
+	Window on browsing scopes and WorkerGlobalScope as specific variants in workers via the property console. It's exposed as Window.console, and can be referenced as simply console.
+	For example:
+		console.log("this will replace it")
+
+
+Various methods are as follows:
+console.log(),console.assert(),console.clear(),console.count(),console.countReset(),console.debug(),console.error(),console.warn(),console.time(),console.timeEnd(),etc.
+
+	1. console.log()
+	For general output of logging information. You may use string substitution and additional arguments with this method.
+
+	2.console.assert()
+	Log a message and stack trace to console if the first argument is false.
+
+	3.console.clear()
+	Clear the console.
+
+	4.console.count()
+	Log the number of times this line has been called with the given label.
+
+	5.console.countReset()
+	Resets the value of the counter with the given label.
+
+	6.console.debug()
+	Outputs a message to the console with the log level "debug".
+
+	7.console.error()
+	Outputs an error message. You may use string substitution and additional arguments with this method
+
+	8.console.warn()
+	Outputs a warning message. You may use string substitution and additional arguments with this method.
+
+	9.console.time()
+	Starts a timer with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.
+
+	10.console.timeEnd()
+	Stops the specified timer and logs the elapsed time in seconds since it started.
+
+
+QUESTION 2:
+[2] write the difference between var, let and const wwith code examples.
+Ans)
+	1) var declarations are globally scoped or function scoped while let & const are block spaced.
+	2) var variables can e updated and redeclared within its scope; let variables can be updated but not redeclared; 
+	   const variables can neither be updated nor re-declared.
+	3) They are all hoisted to the top of their scope but while var variables are initialized  with underdefned, let and const variables are not
+           initialized.
+		eg of var: var a = 10;
+		code eg:
+		function nodeSimplified() {
+		  var a = 10;
+		  console.log(a);
+		  if (true) {
+			var a=20;
+		  	console.log(a);
+		}
+		console.log(a);
+		}
+
+		eg of let : let a = 10;
+		code eg:
+		function nodeSimplified() {
+		  let a = 10;
+		  console.log(a);
+		  if (true) {
+			let a=20;
+			console.log(a);
+		}
+		console.log(a);
+		}
+		eg of const: const a = 10;
+		code eg:
+		function  nodeSimplified() {
+		const MY_VARIABLE = 10;
+		console.log(MY_VARIABLE);
+		}
+
+
+QUESTION 3:
+[3] write a brief on available data types in js 
+Ans)
+There are 8 data types in js:
+	1) Number : it represent both integers and floating point numbers  like *,/,+,- and so on.
+		let n = 123;
+		n = 12.345;
+	2) BigInt: it is creating by appending n to the end of an integer.
+		const bigInt = 12345678901234567891234567890123456789n
+	3) String: It must be surrounded bu quotes.i.e; double quotes , single quotes, Backticks.
+		let str = "Hello"
+		let str = 'Hello'
+		let str = `Hello`
+	4) Boolean: it has two values True and False.
+		let nameFieldChecked = true;
+		let ageFieldChecked = false;
+	5) null: it forms a separate type of its own which contains only the null value.
+		let age = null;
+	6) undefined: it makes a type of its own , just like null. it means value is not assigned.
+		let age;
+		age = undefined;
+		alert(age);
+	7) objects and  symbols
+	8) the typeof operator : 2types- typeof x 
+					 typeof(x) 
